@@ -14,10 +14,15 @@ docker pull ivoputzer/tig:latest
 
 ### add alias to your shell profile
 ```sh
-alias tig="docker run --rm -v $(pwd):/wd -i ivoputzer/tig $@"
+alias tig="docker run --rm -v $(pwd):/wd -it ivoputzer/tig $@"
 ```
 
 ### add alias to your fish config
 ```fish
-alias tig "docker run --rm -v (pwd):/wd -i ivoputzer/tig $argv"
+alias tig "docker run --rm -v (pwd):/wd -it ivoputzer/tig $argv"
+```
+
+### add alias to your dos prompt
+```dos
+doskey tig=docker run --rm -v %cd%:/wd -it ivoputzer/tig $*
 ```
